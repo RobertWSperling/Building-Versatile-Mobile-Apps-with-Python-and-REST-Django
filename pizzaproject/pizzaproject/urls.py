@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/', include('stores.urls')),
     path('api-token-auth/', views.obtain_auth_token),
     path('register/', UserCreateView.as_view(), name='create_user'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + \
+              static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
